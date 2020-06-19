@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Yoga Studio Template">
+    <meta name="keywords" content="Yoga, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sw | Project3</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Search model -->
+	<div class="search-model">
+		<div class="h-100 d-flex align-items-center justify-content-center">
+			<div class="search-close-switch">+</div>
+			<form class="search-model-form">
+				<input type="text" id="search-input" placeholder="Search here">
+			</form>
+        </div>
+        
+	</div>
+	<!-- Search model end -->
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="inner-header">
+                <div class="logo">
+                    <a href="./"><img src="/stylesheets/voiet/img/kom.png" alt=""></a>
+                </div>
+                <div class="header-right">
+                    <img src="/stylesheets/voiet/img/icons/search.png" alt="" class="search-trigger">
+                    <% 
+                if(login_check)
+                { %>
+                    <div class="user-access">
+                    <a href="/users/read/<%=login_check%>"><img src="/stylesheets/voiet/img/icons/man.png" alt="">
+                    </div>
+                <%}%>
+                        <img src="/stylesheets/voiet/img/icons/bag.png" alt="">
+                        <span>2</span>
+                    </a>
+                </div>
+                
+                <% 
+                if(!login_check)
+                { %>
+                    <div class="user-access">
+                        <a href="#">Register</a>
+                        <a href="/login" class="in">Sign in</a>
+                    </div>
+                <% } 
+                else 
+                { %>
+                    <div class="user-access">
+                       <%=name%>(<%=grade%>)님 환영합니다.
+                      <a href = "/logout" class = "in"> logout</a>
+                    </div>
+                <% } 
+                %>
+                
+                
+                <nav class="main-menu mobile-menu">
+                    <ul>
+                        <li><a class="active" href="./">Home</a></li>
+                        <li><a href="/product_page">Shop</a>
+                            <ul class="sub-menu">
+                                <li><a href="/product_page">Product Page</a></li>
+                                <li><a href="/product_page/write">upload product</a></li>
+                                <li><a href="/cart">Shopping Card</a></li>
+                                <li><a href="/afterbuy">order</a></li>
+                                <li><a href="/logout">logout</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/product_page/about">About</a>
+                        <ul class="sub-menu">
+                            <li><a href="/product">Write Review</a></li>
+                            <li><a href="/product_page/review_list/1">Review</a></li>
+                            <li><a href="/product_page/about">About us</a></li>
+
+                        </ul>
+                    </li>
+                        <!-- <li><a href="./check-out.html">Blog</a></li> -->
+                        <li><a href="/product_page/contact">Contact</a></li>
+                        <li><a href="/manager">Manager</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Header Info Begin -->
+    <div class="header-info">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="header-item">
+                        <img src="/stylesheets/voiet/img/icons/delivery.png" alt="">
+                        <p>국내 어디든 무료 배송</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-left text-lg-center">
+                    <div class="header-item">
+                        <img src="/stylesheets/voiet/img/icons/voucher.png" alt="">
+                        <p>학생시 20% 할인</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-left text-xl-right">
+                    <div class="header-item">
+                    <img src="/stylesheets/voiet/img/icons/sales.png" alt="">
+                    <p>다량 구매시 30% 할인</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header Info End -->
+    <!-- Header End -->
+
+    <!-- Hero Slider Begin -->
+    <section class="hero-slider">
+        <div class="hero-items owl-carousel">
+            <div class="single-slider-item set-bg" data-setbg="/stylesheets/voiet/img/lolo..jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1></h1>
+                            <h2></h2>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Slider End -->
+
+    <!-- Features Section Begin -->
+    <section class="features-section spad">
+        <div class="features-ads">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="single-features-ads first">
+                            <img src="/stylesheets/voiet/img/icons/f-delivery.png" alt="">
+                            <h4>무료 배송</h4>
+                            <p>김삼철 쇼핑몰은 고객님들의 부담을 덜기 위해
+                                무료 배송을 지원해드리고 있습니다. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-features-ads second">
+                            <img src="/stylesheets/voiet/img/icons/coin.png" alt="">
+                            <h4>중고시 환불 </h4>
+                            <p>김삼철 쇼핑몰은 100% 새책 판매 한다는 것을
+                                보장합니다. 아닐시 100% 환불 해드리겠습니다. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-features-ads">
+                            <img src="/stylesheets/voiet/img/icons/chat.png" alt="">
+                            <h4>24시간 상담</h4>
+                            <p>김삼철 쇼핑몰은 24시간 무료 상담이 가능합니다.
+                                 1:1 문의를 통해 진행해 주세요. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Features Box -->
+        <div class="features-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="single-box-item first-box">
+                                    <img src="/stylesheets/voiet/img/express.jpg" alt="">
+                                    <div class="box-text">
+                                        <span class="trend-year"></span>
+                                        <h2></h2>
+                                        <span class="trend-alert"></span>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                              <div class="col-lg-7">
+                                  <div class="single-box-item second-box">
+                                    <img src="/stylesheets/voiet/img/html.jpg" alt="">
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="single-box-item first-box">
+                            <img src="/stylesheets/voiet/img/sql.jpg" alt="">
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Features Section End -->
+
+    <!-- Latest Product Begin -->
+    <section class="latest-products spad">
+        <div class="container">
+            <div class="product-filter">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="section-title">
+                            <h2>Latest Products</h2>
+                        </div>
+                        <ul class="product-controls">
+                            <li data-filter="*">All</li>
+                            <li data-filter=".dresses">인기</li>
+                            <li data-filter=".bags">최신</li>
+                            <li data-filter=".shoes">스테디</li>
+                            <li data-filter=".accesories">필수</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="product-list">
+                <div class="col-lg-3 col-sm-6 mix all dresses bags">
+                    <div class="single-product-item">
+                        <figure>
+                            <a href="#"><img src="/stylesheets/voiet/img/products/1.jpg" alt=""></a>
+                            <div class="p-status">new</div>
+                        </figure>
+                        <div class="product-text">
+                            <h6>코틀린으로 쇼핑몰 앱 만들기</h6>
+                            <p>27,000원</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mix all dresses bags">
+                    <div class="single-product-item">
+                        <figure>
+                            <a href="#"><img src="/stylesheets/voiet/img/products/2.jpg" alt=""></a>
+                            <div class="p-status sale">sale</div>
+                        </figure>
+                        <div class="product-text">
+                            <h6>첫 파이썬</h6>
+                            <p>24,500원</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mix all shoes accesories">
+                    <div class="single-product-item">
+                        <figure>
+                            <a href="#"><img src="/stylesheets/voiet/img/products/3.jpg" alt=""></a>
+                            <div class="p-status">new</div>
+                        </figure>
+                        <div class="product-text">
+                            <h6>R코딩</h6>
+                            <p>19,900원</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mix all shoes accesories">
+                    <div class="single-product-item">
+                        <figure>
+                            <a href="#"><img src="/stylesheets/voiet/img/products/4.jpg" alt=""></a>
+                            <div class="p-status popular">popular</div>
+                        </figure>
+                        <div class="product-text">
+                            <h6>나쁜 프로그래밍 습관</h6>
+                            <p>23,000원</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mix all dresses shoes">
+                    <div class="single-product-item">
+                        <figure>
+                            <a href="#"><img src="/stylesheets/voiet/img/products/5.jpg" alt=""></a>
+                            <div class="p-status">new</div>
+                        </figure>
+                        <div class="product-text">
+                            <h6>열혈 C프로그래밍</h6>
+                            <p>24,800원</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mix all accesories bags">
+                    <div class="single-product-item">
+                        <figure>
+                            <a href="#"><img src="/stylesheets/voiet/img/products/6.jpg" alt=""></a>
+                            <div class="p-status sale">sale</div>
+                        </figure>
+                        <div class="product-text">
+                            <h6>열혈 C++프로그래밍</h6>
+                            <p>25,700원</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mix all dresses bags">
+                    <div class="single-product-item">
+                        <figure>
+                            <a href="#"><img src="/stylesheets/voiet/img/products/7.jpg" alt=""></a>
+                        </figure>
+                        <div class="product-text">
+                            <h6>컴퓨터 네트워킹</h6>
+                            <p>21,400원</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mix all accesories bags">
+                    <div class="single-product-item">
+                        <figure>
+                            <a href="#"><img src="/stylesheets/voiet/img/products/8.jpg" alt=""></a>
+                            <div class="p-status popular">popular</div>
+                        </figure>
+                        <div class="product-text">
+                            <h6>딥러닝 입문</h6>
+                            <p>26,300원</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section spad">
+        <div class="container">
+            <div class="newslatter-form">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form action="#">
+                        </form>
+                    </div>
+                </div>
+            </div>
+		</div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="/stylesheets/voiet/js/jquery-3.3.1.min.js"></script>
+    <script src="/stylesheets/voiet/js/bootstrap.min.js"></script>
+    <script src="/stylesheets/voiet/js/jquery.magnific-popup.min.js"></script>
+    <script src="/stylesheets/voiet/js/jquery.slicknav.js"></script>
+    <script src="/stylesheets/voiet/js/owl.carousel.min.js"></script>
+    <script src="/stylesheets/voiet/js/jquery.nice-select.min.js"></script>
+    <script src="/stylesheets/voiet/js/mixitup.min.js"></script>
+    <script src="/stylesheets/voiet/js/main.js"></script>
+</body>
+
+</html>
