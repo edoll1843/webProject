@@ -1,4 +1,4 @@
-# sw_project3
+# 전공서적 쇼핑몰
 1. 개발 환경에 대한 기술
 
  이번에 쇼핑몰을 구현하면서 사용한 기술은 node.js, MySQL, CSS, HTML, JavaScript, Bootstrap, Express로 총 7가지라 할 수 있다.
